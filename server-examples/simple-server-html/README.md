@@ -35,3 +35,8 @@ Finally, we'll start the HTTP server listening on localhost port 8100 for incomi
 22. server.listen(8100, "127.0.0.1");
 23. console.log("Server is ready");
 ```
+
+## Running The Sample
+
+-   npm start
+-   Visit: http://127.0.0.1:8100

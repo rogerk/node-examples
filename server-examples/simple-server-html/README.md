@@ -14,7 +14,7 @@ First we'll include the necessary Node.js modules:
 14. const http = require("http");
 ```
 
-Next, we'll create the HTTP server and specify the processing when an HTTP request is recieved:
+Next, we'll create the HTTP server and specify the processing when an HTTP request is received:
 
 -   Create the HTTP server using the [createServer](https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener) api, specifying the incoming request and the outgoing response.
 -   Set the proper HTML content type for the response.

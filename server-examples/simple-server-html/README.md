@@ -6,7 +6,7 @@ A simple Node server that serves HTML.
 
 First we'll include the necessary Node.js modules:
 
--   The [File System (fs)](https://nodejs.org/api/fs.html) module will be used to access the html file for the response.
+-   The [File System (fs)](https://nodejs.org/api/fs.html) module will be used to access the HTML file for the response.
 -   The [HTTP (http)](https://nodejs.org/api/http.html) module will be used to create the HTTP server.
 
 ```js

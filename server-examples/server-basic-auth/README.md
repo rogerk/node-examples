@@ -14,7 +14,7 @@ First we'll include the necessary Node.js modules:
 15. const auth = require("http-auth");
 ```
 
-We'll define the authentication configuration including an authentication realm and a reference to the password file:
+We'll define the authentication configuration including an authentication realm and a reference to the password file. In this case, the implementation looks for the password file in the current directory:
 
 ```js
 17. const basicAuth = auth.basic({

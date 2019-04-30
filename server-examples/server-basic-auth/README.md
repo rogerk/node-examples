@@ -47,7 +47,8 @@ Finally, we'll start the HTTP server listening on localhost port 8100 for incomi
 ## Running The Sample
 
 - Install the Node.js utility, **htpasswd** to manage the password file:
-  - npm install -g htpasswd
-
-* npm start
-* Visit: http://127.0.0.1:8100
+  - `npm install -g htpasswd`
+- Create the password file specifying a file name (in this case we are naming the file `htpasswd`), user name and password (-c argument: create the file; -b argument: specify password on command line):
+  - htpasswd -bc `<filename>` `<user>` `<password>`
+- npm start
+- Visit: http://127.0.0.1:8100

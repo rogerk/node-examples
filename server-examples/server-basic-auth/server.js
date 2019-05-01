@@ -15,14 +15,26 @@ const http = require("http");
 const auth = require("http-auth");
 
 const basicAuth = auth.basic({
-  realm: "Private area",
-  file: __dirname + "/htpasswd"
+    realm: "Private area",
+    file: __dirname + "/htpasswd"
+});
+
+basicAuth.on("success", (req, res) => {
+    console.log(`User authenticated: ${req.user}`);
+});
+
+basicAuth.on("fail", (req, res) => {
+    console.log(`User authentication failed: ${req.user}`);
+});
+
+basicAuth.on("error", (error, req) => {
+    console.log(`Authentication error: ${error.code + " - " + error.message}`);
 });
 
 const server = http.createServer(basicAuth, (req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  res.write(`Welcome ${req.user}`);
-  res.end();
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.write(`Welcome ${req.user}`);
+    res.end();
 });
 
 server.listen(8100, "127.0.0.1");
